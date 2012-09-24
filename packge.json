@@ -1,0 +1,28 @@
+{
+  "name": "remote-slide",
+  "version": "0.0.1",
+  "description": "Remote Slide is a remote slide tool",
+  "main": "app.js",
+  "directories": {
+    
+  },
+  "dependencies": {
+    
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaydson/remote-slide.git"
+  },
+  "keywords": [
+    "slides",
+    "html5",
+    "presentation",
+    "tool",
+    "remote"    
+  ],
+  "author": "Jaydson Gomes",
+  "license": "MIT"
+}

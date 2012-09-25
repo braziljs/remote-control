@@ -52,3 +52,6 @@ remote.on('previous', function() {
 	// Your method to move to the previous slide
 });
 ```
+Now point your phone browser to your IP address on port 81.  
+You must see a ugly(i'm working on that) page with 3 buttons.  
+If everything is ok, now you are able to control your HTML5 presentation with your phone.

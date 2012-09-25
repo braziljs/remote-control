@@ -22,26 +22,26 @@ For while, you need to install manually :(
 
 First, if you don't have node, you must to install. Google it, if you don't know how.
 Intall sockt.io:
-'''CLI
+```cli
 npm install socket.io
-'''
+```
 
 ## How to use
 Run app.js:
-'''CLI
+```cli
 node app.js
-'''
+```
 The server will be available at port 81 [http:localhost:81](http:localhost:81), but you can change if you want.
 
 Now, you need to add 2 JavaScript libraries to your HTML5 presentation:
-'''HTML
+```html
 <script src="http://localhost:81/socket.io/socket.io.js"></script>
 <script src="path/to/remote-slide.js"></script>
-'''
+```
 
 You're almost ready to start the presentation!
 Add this code to your presentation file
-'''JAVASCRIPT
+```javascript
 var remote = new RemoteSlide();
 remote.connect('http://localhost:81');
 remote.on('next', function() {
@@ -51,4 +51,4 @@ remote.on('next', function() {
 remote.on('previous', function() {
 	// Your method to move to the previous slide
 });
-'''
+```

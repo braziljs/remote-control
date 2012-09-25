@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<style>
+		.bt {
+			width: 120px;
+			height: 120px;
+			font-size: 120px;
+		}
+	</style>
+</head>
+<body>
+	<input class="bt" type="button" id="previous" value="<">
+	<input class="bt" type="button" id="next" value=">">
+	<input class="bt" type="button" id="fullscreen" value="F
+
+	">
+	<script>
+		var socket = io.connect(window.location.href);
+
+		document.getElementById("next").addEventListener("click", function() {
+			socket.send("next");
+		});
+
+		document.getElementById("previous").addEventListener("click", function() {
+			socket.send("previous");
+		});
+
+		document.getElementById("fullscreen").addEventListener("click", function() {
+			socket.send("fullscreen");
+		});
+	</script>
+</body>
+</html>

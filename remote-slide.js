@@ -7,7 +7,9 @@ if (!window.io) {
 
 	private = {
 
-		socket : io.connect('http://192.168.0.100:81'),
+		socket : null,
+
+		connected : false,
 
 		setAction : function(action, fn) {
 			private.socket.on('message', function(data) {
@@ -18,12 +20,23 @@ if (!window.io) {
 		}
 	};
 
+	RemoteSlide.prototype.connect = function (socketserver) {
+		if (private.connected === false) {
+			private.socket = io.connect(socketserver);
+			private.connected = true;
+		}
+	};
+
 	RemoteSlide.prototype.on = function (action, fn) {
-		var act = action.match(/next|previous|fullscreen/);
-		if (act !== null && act[0]) {
-			private.setAction(action,fn);
+		if (private.connected) {
+			var act = action.match(/next|previous|fullscreen/);
+			if (act !== null && act[0]) {
+				private.setAction(action,fn);
+			} else {
+				throw 'Invalid action name';
+			}
 		} else {
-			throw 'Invalid action name';
+			throw '#RemoteSlide - You must to connect before!';
 		}
 	};	
 

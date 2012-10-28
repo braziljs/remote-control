@@ -2,34 +2,108 @@
 <html>
 <head>
 	<script src="/socket.io/socket.io.js"></script>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
 	<style>
-		.bt {
-			width: 120px;
-			height: 120px;
-			font-size: 120px;
-		}
+            html, body{
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+                overflow: hidden;
+            }
+            #pointingArea{
+                height: 84%;
+                width: 100%;
+                background-color: #eef;
+            }
+            #buttons{
+                border: solid 1px red;
+                width: 100%;
+                height: 16%;
+            }
+            .bt {
+                width: 33%;
+                height: 100% !IMPORTANT;
+                font-size: 120px;
+            }
 	</style>
 </head>
 <body>
-	<input class="bt" type="button" id="previous" value="<">
-	<input class="bt" type="button" id="next" value=">">
-	<input class="bt" type="button" id="fullscreen" value="F
-
-	">
+        <div id="pointingArea"></div>
+        <div id="buttons">
+            <input class="bt" type="button" id="previous" value="<">
+            <input class="bt" type="button" id="camera" value="C">
+            <input class="bt" type="button" id="next" value=">">
+        </div>
 	<script>
+            
+                var key= false,
+                    w=0, h= 0, l=0, t=0, timer;
+                    
+                while(!key){
+                    key= window.prompt("Please enter the access code to sync:", 10);
+                }
+            
+                var keepDrawing= function(event){
+                    
+                    if(event.pageY){
+                        l= event.pageX*100/w;
+                        t= event.pageY*100/h;
+                    }else{
+                        l= event.touches[0].pageX*100/w;
+                        t= event.touches[0].pageY*100/h;
+                    }
+                    
+                    
+                    socket.emit("point", [l, t]);
+                }
+                
+                var startDrawing= function(event){
+                    
+                    if(timer){
+                        window.clearTimeout(timer);
+                        timer= false;
+                    }
+                    
+                    w= document.body.offsetWidth;
+                    h= document.body.offsetHeight;
+                    
+                    this.addEventListener('mousemove', keepDrawing);
+                    this.addEventListener('touchmove', keepDrawing);
+                };
+            
+                var endDrawing= function(event){
+                    this.removeEventListener('touchmove', keepDrawing);
+                    this.removeEventListener('mousemove', keepDrawing);
+                    timer= setTimeout(function(){
+                        socket.emit("point", [-1, -1]);
+                        timer= false;
+                    }, 500);
+                };
+            
 		var socket = io.connect(window.location.href);
+                socket.emit('requestSync', key);
 
 		document.getElementById("next").addEventListener("click", function() {
-			socket.send("next");
+                    socket.emit("next");
 		});
 
 		document.getElementById("previous").addEventListener("click", function() {
-			socket.send("previous");
+                    socket.emit("prev");
 		});
 
-		document.getElementById("fullscreen").addEventListener("click", function() {
-			socket.send("fullscreen");
+		document.getElementById("camera").addEventListener("click", function() {
+                    socket.emit("camera");
 		});
+                
+            document.getElementById('pointingArea').addEventListener('mousedown', startDrawing);
+            document.getElementById('pointingArea').addEventListener('mouseup', endDrawing);
+            
+            document.getElementById('pointingArea').addEventListener('touchstart', startDrawing);
+            document.getElementById('pointingArea').addEventListener('touchend', endDrawing);
+            
 	</script>
 </body>
 </html>

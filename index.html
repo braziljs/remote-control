@@ -13,9 +13,8 @@
 <body>
 	<input class="bt" type="button" id="previous" value="<">
 	<input class="bt" type="button" id="next" value=">">
-	<input class="bt" type="button" id="fullscreen" value="F
-
-	">
+	<input class="bt" type="button" id="camera" value="C">
+	<input class="bt" type="button" id="start" value="S">
 	<script>
 		var socket = io.connect(window.location.href);
 
@@ -27,8 +26,12 @@
 			socket.send("previous");
 		});
 
-		document.getElementById("fullscreen").addEventListener("click", function() {
-			socket.send("fullscreen");
+		document.getElementById("camera").addEventListener("click", function() {
+			socket.send("camera");
+		});
+
+		document.getElementById("start").addEventListener("click", function() {
+			socket.send("start");
 		});
 	</script>
 </body>

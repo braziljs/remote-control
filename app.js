@@ -16,9 +16,10 @@ function handler (req, res) {
     res.end(data);
   });
 }
-  
+ 
 io.sockets.on('connection', function (socket) {
   socket.on('message', function(data) {
+      console.log(data);
       socket.broadcast.send(data);
   });
 });

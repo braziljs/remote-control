@@ -48,7 +48,6 @@ io.sockets.on('connection', function (socket) {
   });
   
   socket.on('requestSync', function(key) {
-      console.warn("REQUESTING SYNC >>>>>", key);
       socket.join(key);
       hash= key;
       socket.broadcast.to(hash).emit('sync');

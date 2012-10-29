@@ -19,7 +19,6 @@
                 background-color: #eef;
             }
             #buttons{
-                border: solid 1px red;
                 width: 100%;
                 height: 16%;
             }
@@ -38,66 +37,69 @@
             <input class="bt" type="button" id="next" value=">">
         </div>
 	<script>
-            
-                var key= false,
-                    w=0, h= 0, l=0, t=0, timer;
-                    
-                while(!key){
-                    key= window.prompt("Please enter the access code to sync:", 10);
+
+            var key= false,
+                w=0, h= 0, l=0, t=0, timer;
+
+            while(!key){
+                key= window.prompt("Please enter the access code to sync:", 10);
+            }
+
+            var setTL= function(evt){
+                if(evt.pageY){
+                    l= evt.pageX*100/w;
+                    t= evt.pageY*100/h;
+                }else{
+                    l= evt.touches[0].pageX*100/w;
+                    t= evt.touches[0].pageY*100/h;
                 }
-            
-                var keepDrawing= function(event){
-                    
-                    if(event.pageY){
-                        l= event.pageX*100/w;
-                        t= event.pageY*100/h;
-                    }else{
-                        l= event.touches[0].pageX*100/w;
-                        t= event.touches[0].pageY*100/h;
-                    }
-                    
-                    
-                    socket.emit("point", [l, t]);
-                }
+            }
+
+            var keepDrawing= function(event){
+                setTL(event);
+                socket.emit("point", [l, t, false]);
+            }
+
+            var startDrawing= function(event){
+
+                //if(timer){
+                w= document.body.offsetWidth;
+                h= document.body.offsetHeight;
                 
-                var startDrawing= function(event){
-                    
-                    if(timer){
-                        window.clearTimeout(timer);
-                        timer= false;
-                    }
-                    
-                    w= document.body.offsetWidth;
-                    h= document.body.offsetHeight;
-                    
-                    this.addEventListener('mousemove', keepDrawing);
-                    this.addEventListener('touchmove', keepDrawing);
-                };
-            
-                var endDrawing= function(event){
-                    this.removeEventListener('touchmove', keepDrawing);
-                    this.removeEventListener('mousemove', keepDrawing);
-                    timer= setTimeout(function(){
-                        socket.emit("point", [-1, -1]);
-                        timer= false;
-                    }, 500);
-                };
-            
-		var socket = io.connect(window.location.href);
-                socket.emit('requestSync', key);
+                setTL(event);
+                window.clearTimeout(timer);
+                socket.emit("point", [l, t, true]);
+                timer= false;
+                //}
 
-		document.getElementById("next").addEventListener("click", function() {
-                    socket.emit("next");
-		});
+                this.addEventListener('mousemove', keepDrawing);
+                this.addEventListener('touchmove', keepDrawing);
+            };
 
-		document.getElementById("previous").addEventListener("click", function() {
-                    socket.emit("prev");
-		});
+            var endDrawing= function(event){
+                this.removeEventListener('touchmove', keepDrawing);
+                this.removeEventListener('mousemove', keepDrawing);
+                timer= setTimeout(function(){
+                    socket.emit("point", [-1, -1]);
+                    timer= false;
+                }, 500);
+            };
 
-		document.getElementById("camera").addEventListener("click", function() {
-                    socket.emit("camera");
-		});
-                
+            var socket = io.connect(window.location.href);
+            socket.emit('requestSync', key);
+
+            document.getElementById("next").addEventListener("click", function() {
+                socket.emit("next");
+            });
+
+            document.getElementById("previous").addEventListener("click", function() {
+                socket.emit("prev");
+            });
+
+            document.getElementById("camera").addEventListener("click", function() {
+                socket.emit("camera");
+            });
+
             document.getElementById('pointingArea').addEventListener('mousedown', startDrawing);
             document.getElementById('pointingArea').addEventListener('mouseup', endDrawing);
             

@@ -45,6 +45,14 @@ io.sockets.on('connection', function (socket) {
   socket.on('point', function(data){
       io.sockets.in(hash).emit('point', data);
   });
+
+  socket.on('laserpoint', function(data){
+    io.sockets.in(hash).emit('laserpoint', data);
+  });
+
+  socket.on('holofote', function(data){
+    io.sockets.in(hash).emit('holofote', data);
+  });
   
   socket.on('requestSync', function(key) {
       socket.join(key);

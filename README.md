@@ -1,8 +1,8 @@
-# Remote Slide
-Remote Slide is a tool to control your HTML5 presentation slides remotely
+# Remote Control
+Remote Control is a tool to control your HTML5 presentation slides remotely
 
 ## The goal
-The idea of Remote Slide is provide a way to control the slides of a HTML5 presentantion, remotely.  
+The idea of Remote Control is provide a way to control the slides of a HTML5 presentantion, remotely.  
 Your phone is your remote control!
 
 ## Dependencies
@@ -12,7 +12,7 @@ Your phone is your remote control!
 * A modern Web Browser with WebSockets support in your phone [can i use websockets?](http://caniuse.com/#search=websockets)
 
 ## How it works
-Remote Slide is based on [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), so you may have a good and modern browser, like Firefox, Chrome or Opera.  
+Remote Control is based on [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), so you may have a good and modern browser, like Firefox, Chrome or Opera.  
 The phone send a message through WebSockets to the server.   
 The server receive the message as an action that must be executed, like 'next' or 'previous'.   
 This action are emited to the HTML5 presentation.
@@ -36,7 +36,7 @@ The server will be available at port 81 [http:localhost:81](http:localhost:81), 
 Now, you need to add 2 JavaScript libraries to your HTML5 presentation:
 ```html
 <script src="http://localhost:81/socket.io/socket.io.js"></script>
-<script src="path/to/remote-slide.js"></script>
+<script src="path/to/remote-control.js"></script>
 ```
 
 You're almost ready to start the presentation!  

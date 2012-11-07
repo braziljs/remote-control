@@ -1,7 +1,7 @@
 {
-  "name": "remote-slide",
+  "name": "remote-control",
   "version": "0.0.1",
-  "description": "Remote Slide is a remote slide tool",
+  "description": "Remote Control is a remote slide tool",
   "main": "app.js",
   "directories": {
     
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaydson/remote-slide.git"
+    "url": "https://github.com/braziljs/remote-control.git"
   },
   "keywords": [
     "slides",

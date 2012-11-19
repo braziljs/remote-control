@@ -1,6 +1,8 @@
 # Remote Control
 Remote Control is a tool to control your HTML5 presentation slides remotely
 
+![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
+
 ## The goal
 The idea of Remote Control is provide a way to control the slides of a HTML5 presentantion, remotely.  
 Your phone is your remote control!

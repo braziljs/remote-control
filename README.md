@@ -1,5 +1,5 @@
 # Remote Control
-Remote Control is a tool to control your HTML5 presentation slides remotely
+Remote Control is a tool to control your HTML5 presentation slides remotely(Duh)
 
 ![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
 
@@ -23,7 +23,7 @@ This action are emited to the HTML5 presentation.
 For while, you need to install manually :(
 
 First, if you don't have node, you must to install. Google it, if you don't know how.  
-Intall sockt.io:
+Intall socket.io:
 ```cli
 npm install socket.io
 ```
@@ -44,7 +44,7 @@ Now, you need to add 2 JavaScript libraries to your HTML5 presentation:
 You're almost ready to start the presentation!  
 Add this code to your presentation file:
 ```javascript
-var remote = new RemoteSlide();
+var remote = new RemoteControl();
 remote.connect('http://localhost:81');
 remote.on('next', function() {
 	// Your method to move to the next slide

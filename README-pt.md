@@ -3,7 +3,7 @@
 ---
 
 # Remote Control
-Remote Control é uma ferramenta para controlar suas apresentações HTML5 remotamente(Duh).
+Uma ferramenta para controlar os slides das suas apresentações HTML5 através do celular.
 
 ![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
 

@@ -1,3 +1,7 @@
+*[Leia a documentação em Português](https://github.com/braziljs/remote-control/blob/master/README-pt.md)*
+
+---
+
 # Remote Control
 Remote Control is a tool to control your HTML5 presentation slides remotely(Duh)
 

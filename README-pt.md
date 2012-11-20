@@ -1,3 +1,7 @@
+*[Read the documentation in English](https://github.com/braziljs/remote-control/blob/master/README.md)*
+
+---
+
 # Remote Control
 Remote Control é uma ferramenta para controlar suas apresentações HTML5 remotamente(Duh).
 

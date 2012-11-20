@@ -7,17 +7,18 @@ Uma ferramenta para controlar os slides das suas apresentações HTML5 através 
 
 ![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
 
+## Como funciona
+O Remote Control é baseado em [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), então, você deve ter um Browser moderno, como o Firefox, Chrome ou Opera.  
+
+O celular envia uma mensagem via WebSockets para o servidor.  
+O servidor recebe esta mensagem como uma ação que deve ser executada, como por exemplo: 'next' ou 'previous'.  
+Esta ação é emitida para a apresentação HTML5.  
+
 ## Dependências
 * [nodejs](http://nodejs.org)
 * [socket.io](http://socket.io)
 * Um Browser moderno com suporte à WebSockets no seu pc [can i use websockets?](http://caniuse.com/#search=websockets)
 * Um Browser moderno com suporte à WebSockets no seu celular [can i use websockets?](http://caniuse.com/#search=websockets)
-
-## Como funciona
-O Remote Control é baseado em [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), então, você deve ter um Browser moderno, como o Firefox, Chrome ou Opera.  
-O celular envia uma mensagem via WebSockets para o servidor.  
-O servidor recebe esta mensagem como uma ação que deve ser executada, como por exemplo: 'next' ou 'previous'.  
-Esta ação é emitida para a apresentação HTML5.  
 
 ## Como instalar
 Por enquanto, você deve instalar manulamente :(  

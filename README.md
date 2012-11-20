@@ -23,7 +23,7 @@ This action are emited to the HTML5 presentation.
 For while, you need to install manually :(
 
 First, if you don't have node, you must to install. Google it, if you don't know how.  
-Intall socket.io:
+Install socket.io:
 ```cli
 npm install socket.io
 ```

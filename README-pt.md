@@ -3,11 +3,11 @@ Remote Control é uma ferramenta para controlar suas apresentações HTML5 remot
 
 ![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
 
-*[Como funciona](#como-funciona)
-*[Dependências](#dependências)
-*[Como instalar](#como-instalar)
-*[Como usar](#como-usar)
-*[Envolva-se com o projet](#envolva-se-com--projeto)
+* [Como funciona](#como-funciona)
+* [Dependências](#dependências)
+* [Como instalar](#como-instalar)
+* [Como usar](#como-usar)
+* [Envolva-se com o projet](#envolva-se-com--projeto)
 
 ## Como funciona
 O Remote Control é baseado em [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), então, você deve ter um Browser moderno, como o Firefox, Chrome ou Opera.  

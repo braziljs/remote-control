@@ -3,21 +3,23 @@ Remote Control é uma ferramenta para controlar suas apresentações HTML5 remot
 
 ![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
 
-## Objetivo
-A ideia do Remote Control é fornecer uma maneira fácil de controlar os slides de suas apresentações HTML5, remotamente.  
-O seu celular é o seu controle remoto!
-
-## Dependências
-* [nodejs](http://nodejs.org)
-* [socket.io](http://socket.io)
-* Um Browser moderno com suporte à WebSockets no seu pc [can i use websockets?](http://caniuse.com/#search=websockets)
-* Um Browser moderno com suporte à WebSockets no seu celular [can i use websockets?](http://caniuse.com/#search=websockets)
+*[Como funciona](#como-funciona)
+*[Dependências](#dependências)
+*[Como instalar](#como-instalar)
+*[Como usar](#como-usar)
+*[Envolva-se com o projet](#envolva-se-com--projeto)
 
 ## Como funciona
 O Remote Control é baseado em [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), então, você deve ter um Browser moderno, como o Firefox, Chrome ou Opera.  
 O celular envia uma mensagem via WebSockets para o servidor.  
 O servidor recebe esta mensagem como uma ação que deve ser executada, como por exemplo: 'next' ou 'previous'.  
-Esta ação é emitida para a apresentação HTML5.  
+Esta ação é emitida para a apresentação HTML5.
+
+## Dependências
+* [nodejs](http://nodejs.org)
+* [socket.io](http://socket.io)
+* Um Browser moderno com suporte à WebSockets no seu pc [can i use websockets?](http://caniuse.com/#search=websockets)
+* Um Browser moderno com suporte à WebSockets no seu celular [can i use websockets?](http://caniuse.com/#search=websockets)  
 
 ## Como instalar
 Por enquanto, você deve instalar manulamente :(  

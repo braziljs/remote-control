@@ -7,6 +7,12 @@ A tool to control the slides of your HTML5 presentation through a cell phone.
 
 ![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
 
+*[How it works](#how-it-works)
+*[Dependencies](#dependencies)
+*[How to install](#how-to-install)
+*[How to use](#how-to-use)
+*[Get involved](#get-involved)
+
 ## How it works
 Remote Control is based on [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), so you may have a good and modern browser, like Firefox, Chrome or Opera.  
 

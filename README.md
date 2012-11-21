@@ -76,6 +76,6 @@ If everything is ok, now you are able to control your HTML5 presentation with yo
 
 
 # Who is behind of it?
-**Project Leaders**: 
-[Jaydson Gomes](http://github.com/jaydson)
+**Project Leaders**:  
+[Jaydson Gomes](http://github.com/jaydson)  
 [Felipe N. Moura](http://github.com/felipenmoura)

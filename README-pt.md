@@ -70,6 +70,6 @@ Se tudo estiver ok, agora você já pode controlar suas apresentações HTML5 co
 - Se você mesmo quer implementar esta funcionalidade (wow! wow!), implemente e [faça um pull-request](https://github.com/braziljs/remote-control/pulls)
 
 # Quem está por trás disso?
-**Líderes do projeto**: 
-[Jaydson Gomes](http://github.com/jaydson)
-[Felipe N. Moura](http://github.com/felipenmoura)
+**Líderes do projeto**:  
+[Jaydson Gomes](http://github.com/jaydson)  
+[Felipe N. Moura](http://github.com/felipenmoura) 

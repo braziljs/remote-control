@@ -1,0 +1,164 @@
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background: #474545;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#button-container {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
+}
+
+.mini-bt {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: #000;		
+	border-radius: 50%;
+	color: #fff;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border: solid 2px #777;
+	box-shadow: 0px 0px 10px #fff;
+	margin-left: 16px;
+	margin-right: 10px;
+	margin-bottom: 6px;
+}
+
+.bt {		
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	background: #000;		
+	border-radius: 50%;
+	color: #fff;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border: solid 4px #777;
+	box-shadow: 0px 0px 20px #fff;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 6px;
+}
+
+.bt.right {
+	background: #000 url('../images/right_arrow.png');
+	background-repeat: no-repeat;
+	background-position: 40px 40px;
+}
+.bt.left {
+	background: #000 url('../images/left_arrow.png');
+	background-repeat: no-repeat;
+	background-position: 38px 40px;
+}
+.mini-bt.camera {
+	background: #000 url('../images/camera.png');
+	background-repeat: no-repeat;
+	background-position: 8px 8px;
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+	    width:1024px;
+    }
+    #container {
+    	
+    }
+
+    .bt {
+		width: 120px;
+		height: 120px;
+    }
+
+    .bt.right {
+		background-position: 35px 30px;
+	}
+	.bt.left {
+		background-position: 30px 30px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+    body{
+	    width:800px;
+    }
+    #container {
+    	
+    }
+
+    .bt {
+		width: 120px;
+		height: 120px;
+    }
+
+    .bt.right {
+		background-position: 35px 30px;
+	}
+	.bt.left {
+		background-position: 30px 30px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+    body{
+	    width:480px;
+    }
+    #container {
+    	
+    }
+
+    .bt {
+		width: 100px;
+		height: 100px;
+    }
+
+    .bt.right {
+		background-position: 20px 20px;
+	}
+	.bt.left {
+		background-position: 20px 20px;
+	}
+}
+
+@media screen and (max-width: 240px) {
+    body{
+	    width: 240px;
+    }
+    #container {
+    	
+    }
+    .bt {
+		width: 80px;
+		height: 80px;
+    }
+
+    .bt.right {
+		background-position: 12px 10px;
+	}
+	.bt.left {
+		background-position: 8px 10px;
+	}
+}

@@ -1,64 +1,35 @@
-var app = require('http').createServer(handler)
-  , io = require('socket.io').listen(app)
-  , fs = require('fs')
-  , hash = false;
 
-app.listen(81);
+/**
+ * Module dependencies.
+ */
 
-function handler (req, res) {
-  fs.readFile(__dirname + '/index.html',
-  function (err, data) {
-    if (err) {
-      res.writeHead(500);
-      return res.end('Error loading index.html');
-    }
-    res.writeHead(200);
-    res.end(data);
-  });
-}
+var express = require('express')
+  , routes = require('./routes')
+  , user = require('./routes/user')
+  , http = require('http')
+  , path = require('path');
 
-io.sockets.on('connection', function (socket) {
-  
-  socket.on('message', function(type, data) {
-      
-      if(hash){
-          socket.broadcast.to(hash).emit(data);
-      }else{
-          socket.broadcast.send(data);
-      }
-      
-  });
-  
-  socket.on('next', function(){
-      io.sockets.in(hash).emit('next');
-  });
-  socket.on('prev', function(){
-      io.sockets.in(hash).emit('prev');
-  });
-  socket.on('camera', function(){
-      io.sockets.in(hash).emit('camera');
-  });
-  socket.on('start', function(){
-      io.sockets.in(hash).emit('start');
-  });
-  
-  socket.on('point', function(data){
-      io.sockets.in(hash).emit('point', data);
-  });
+var app = express();
 
-  socket.on('laserpoint', function(data){
-    io.sockets.in(hash).emit('laserpoint', data);
-  });
+app.configure(function(){
+  app.set('port', process.env.PORT || 3000);
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
+  app.use(express.favicon());
+  app.use(express.logger('dev'));
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(app.router);
+  app.use(express.static(path.join(__dirname, 'public')));
+});
 
-  socket.on('holofote', function(data){
-    io.sockets.in(hash).emit('holofote', data);
-  });
-  
-  socket.on('requestSync', function(key) {
-      socket.join(key);
-      hash= key;
-      socket.broadcast.to(hash).emit('sync');
-      io.sockets.in(hash).emit('sync');
-  });
-  
+app.configure('development', function(){
+  app.use(express.errorHandler());
+});
+
+app.get('/', routes.index);
+app.get('/users', user.list);
+
+http.createServer(app).listen(app.get('port'), function(){
+  console.log("Express server listening on port " + app.get('port'));
 });

@@ -58,3 +58,12 @@ remote.on('previous', function() {
 Now point your phone browser to your IP address on port 81.  
 You must see a ugly(i'm working on that) page with 3 buttons.  
 If everything is ok, now you are able to control your HTML5 presentation with your phone.
+
+## Get involved
+- Fork and Feedback
+  Make a fork, run Remote Control in your enviroment, rate all features and send us your feedback through the [mail list](https://groups.google.com/forum/?fromgroups#!forum/braziljs-foundation)
+- [Become a bug hunter!])(https://github.com/braziljs/remote-control/issues?state=open)
+- If you find some bug, [add an issue])(https://github.com/braziljs/remote-control/issues/new) with the label "bug"
+- If you want to fix the bug by yourself(wow!), make a fix in your enviroment and [make one pull-request](https://github.com/braziljs/remote-control/pulls)
+- If you had an great idea of feature, [add an issue])(https://github.com/braziljs/remote-control/issues/new) with the label "enhancement"
+- If you want to implement the feature by yourself(wow! wow!), do it and [make one pull-request](https://github.com/braziljs/remote-control/pulls)

@@ -68,3 +68,8 @@ Se tudo estiver ok, agora você já pode controlar suas apresentações HTML5 co
 - Se você mesmo quer corrigir este bug(wow!), faça a correção no seu ambiente e [faça um pull-request](https://github.com/braziljs/remote-control/pulls)
 - Se você teve uma grande ideia de funcionalidade, [crie uma issue](https://github.com/braziljs/remote-control/issues/new) com a label "enhancement"
 - Se você mesmo quer implementar esta funcionalidade (wow! wow!), implemente e [faça um pull-request](https://github.com/braziljs/remote-control/pulls)
+
+# Quem está por trás disso?
+**Líderes do projeto**: 
+[Jaydson Gomes](http://github.com/jaydson)
+[Felipe N. Moura](http://github.com/felipenmoura)

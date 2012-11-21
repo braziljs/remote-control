@@ -63,5 +63,5 @@ Se tudo estiver ok, agora você já pode controlar suas apresentações HTML5 co
 - [Seja um caçador de bugs!](https://github.com/braziljs/remote-control/issues?state=open)
 - Se você achou algum bug, [crie uma issue](https://github.com/braziljs/remote-control/issues/new) com a label "bug"
 - Se você mesmo quer corrigir este bug(wow!), faça a correção no seu ambiente e [faça um pull-request](https://github.com/braziljs/remote-control/pulls)
-- Se você teve uma grande ideia de funcionalidade, [crie uma issue](https://github.com/braziljs/remote-control/issues/new) com a "enhancement"
+- Se você teve uma grande ideia de funcionalidade, [crie uma issue](https://github.com/braziljs/remote-control/issues/new) com a label "enhancement"
 - Se você mesmo quer implementar esta funcionalidade (wow! wow!), implemente e [faça um pull-request](https://github.com/braziljs/remote-control/pulls)

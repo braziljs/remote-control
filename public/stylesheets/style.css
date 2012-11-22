@@ -1,14 +1,41 @@
+html {
+	height: 100%;
+}
 body {
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	background: #474545;
 	color: #fff;
+	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
+	height: 100%;	
 }
 
 a {
   color: #00B7FF;
+}
+
+header {
+	background: #fff;
+	height: 30px;
+	margin-top: 0px;
+	margin-left: -4px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	color: #ff4c1e;
+	border-bottom: solid 2px #000;
+}
+header img {
+	position: absolute;
+	right: 40px;
+	float: right;
+	margin-top: -2px;
+}
+header span {
+	color: gray;
+	padding: 4px;
 }
 
 #button-container {
@@ -81,9 +108,6 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
-    body{
-	    width:1024px;
-    }
     #container {
     	
     }
@@ -102,9 +126,20 @@ a {
 }
 
 @media screen and (max-width: 800px) {
-    body{
-	    width:800px;
+
+	header {
+    	margin-left: -2px;
+    	padding-left: 6px;
+    	font-size: 1.8em;
+    	font-weight: bold;    	
+    	padding-bottom: 6px;
     }
+    header img {    	
+    	right: 10px;
+    }
+    header span {
+		font-size: 0.6em;
+	}
     #container {
     	
     }
@@ -123,42 +158,72 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-    body{
-	    width:480px;
+
+    header {
+    	margin-left: -2px;
+    	padding-left: 6px;
+    	font-size: 1.3em;
+    	font-weight: bold;    	
+    	padding-bottom: 6px;
     }
+    header img {
+    	width: 70px;
+    	right: 10px;
+    	margin-top: 3px;
+    }
+    header span {
+		font-size: 0.6em;
+	}
     #container {
     	
     }
 
-    .bt {
-		width: 100px;
-		height: 100px;
-    }
-
-    .bt.right {
-		background-position: 20px 20px;
-	}
-	.bt.left {
-		background-position: 20px 20px;
-	}
-}
-
-@media screen and (max-width: 240px) {
-    body{
-	    width: 240px;
-    }
-    #container {
-    	
-    }
     .bt {
 		width: 80px;
 		height: 80px;
     }
 
     .bt.right {
-		background-position: 12px 10px;
+		background-position: 15px 10px;
 	}
 	.bt.left {
-		background-position: 8px 10px;
+		background-position: 8px 12px;
 	}
+}
+
+@media screen and (max-width: 240px) {
+	header {
+    	margin-left: -2px;
+    	padding-left: 6px;
+    	font-size: 1.1em;
+    	font-weight: bold;    	
+    	padding-bottom: 6px;
+    }
+    header img {
+    	width: 70px;
+    	right: 10px;
+    }
+    header span {
+		font-size: 0.6em;
+	}
+    #container {
+    	
+    }
+    .bt {
+		width: 60px;
+		height: 60px;
+    }
+
+    .bt.right {
+		background-position: 4px 0px;
+	}
+	.bt.left {
+		background-position: 0px 0px;
+	}
+}
+
+@media screen and (max-width: 216px) {
+    header img {
+    	display: none;
+    }
 }

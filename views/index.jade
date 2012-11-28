@@ -1,11 +1,11 @@
 extends layout
 
 block content
-	header Remote Control
+	header #{title}
 		span 1.0
 		img(src='/images/logo-braziljs.png')
 	#container
-		div.mini-bt.camera
+		#camera.mini-bt.camera
 		#button-container
-			div.bt.left
-			div.bt.right
+			#previous.bt.left
+			#next.bt.right

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Remote Control Sample</title>
+</head>
+<body>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="../javascripts/remote-control.js"></script>
+	<script type="text/javascript">
+		var remote = new RemoteControl();
+		remote.connect('http://localhost:3000');
+		remote.sync('myballs');
+        
+        remote.on('next', function() {
+            console.log('next');
+        });
+        remote.on('prev', function() {
+           console.log('prev');
+        });
+	</script>
+</body>
+</html>

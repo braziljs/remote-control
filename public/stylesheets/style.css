@@ -12,10 +12,6 @@ body {
 	height: 100%;	
 }
 
-a {
-  color: #00B7FF;
-}
-
 header {
 	background: #fff;
 	height: 30px;
@@ -89,6 +85,17 @@ header span {
 	margin-left: 16px;
 	margin-right: 16px;
 	margin-bottom: 6px;
+}
+
+.bt:active {
+	position:relative;
+	top:3px;
+	color: #fqq;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	-o-box-shadow:none;
+	box-shadow:none;
 }
 
 .bt.right {
@@ -195,13 +202,15 @@ header span {
 	header {
     	margin-left: -2px;
     	padding-left: 6px;
-    	font-size: 1.1em;
+    	font-size: 1.0em;
     	font-weight: bold;    	
     	padding-bottom: 6px;
+    	height: 12px;
     }
     header img {
     	width: 70px;
     	right: 10px;
+    	top : 2px;
     }
     header span {
 		font-size: 0.6em;

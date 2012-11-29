@@ -75,10 +75,10 @@ If everything is ok, now you are able to control your HTML5 presentation with yo
 - If you want to implement the feature by yourself(wow! wow!), do it and [make one pull-request](https://github.com/braziljs/remote-control/pulls)
 
 
-# Who is behind of it?
+## Who is behind of it?
 **Project Leaders**:  
 [Jaydson Gomes](http://github.com/jaydson)  
 [Felipe N. Moura](http://github.com/felipenmoura)
 
-# License
+## License
 *[MIT License](http://braziljs.mit-license.org/)*

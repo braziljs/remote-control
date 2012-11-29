@@ -73,3 +73,7 @@ Se tudo estiver ok, agora você já pode controlar suas apresentações HTML5 co
 **Líderes do projeto**:  
 [Jaydson Gomes](http://github.com/jaydson)  
 [Felipe N. Moura](http://github.com/felipenmoura) 
+
+---  
+
+*[MIT License](http://braziljs.mit-license.org/)*

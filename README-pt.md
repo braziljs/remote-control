@@ -74,6 +74,5 @@ Se tudo estiver ok, agora você já pode controlar suas apresentações HTML5 co
 [Jaydson Gomes](http://github.com/jaydson)  
 [Felipe N. Moura](http://github.com/felipenmoura) 
 
----  
-
+# Licença
 *[MIT License](http://braziljs.mit-license.org/)*

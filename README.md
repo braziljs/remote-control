@@ -80,7 +80,5 @@ If everything is ok, now you are able to control your HTML5 presentation with yo
 [Jaydson Gomes](http://github.com/jaydson)  
 [Felipe N. Moura](http://github.com/felipenmoura)
 
-
----  
-
+# License
 *[MIT License](http://braziljs.mit-license.org/)*

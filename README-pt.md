@@ -1,8 +1,10 @@
 # Remote Control
 
-![logo](http://braziljs.org/wp-content/uploads/2012/11/remote-control.jpg)
+![Cover](http://braziljs.org/img/projects/remote-control.jpg)
 
 Remote Control é uma ferramenta para controlar suas apresentações HTML5 remotamente(Duh).
+
+> **Mantenedor:** [Jaydson Gomes](https://github.com/jaydson)
 
 * [Como funciona](#como-funciona)
 * [Dependências](#dependências)
@@ -11,22 +13,22 @@ Remote Control é uma ferramenta para controlar suas apresentações HTML5 remot
 * [Envolva-se com o projet](#envolva-se-com--projeto)
 
 ## Como funciona
-O Remote Control é baseado em [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), então, você deve ter um Browser moderno, como o Firefox, Chrome ou Opera.  
-O celular envia uma mensagem via WebSockets para o servidor.  
-O servidor recebe esta mensagem como uma ação que deve ser executada, como por exemplo: 'next' ou 'previous'.  
+O Remote Control é baseado em [WebSockets](https://developer.mozilla.org/en-US/docs/WebSockets), então, você deve ter um Browser moderno, como o Firefox, Chrome ou Opera.
+O celular envia uma mensagem via WebSockets para o servidor.
+O servidor recebe esta mensagem como uma ação que deve ser executada, como por exemplo: 'next' ou 'previous'.
 Esta ação é emitida para a apresentação HTML5.
 
 ## Dependências
 * [nodejs](http://nodejs.org)
 * [socket.io](http://socket.io)
 * Um Browser moderno com suporte à WebSockets no seu pc [can i use websockets?](http://caniuse.com/#search=websockets)
-* Um Browser moderno com suporte à WebSockets no seu celular [can i use websockets?](http://caniuse.com/#search=websockets)  
+* Um Browser moderno com suporte à WebSockets no seu celular [can i use websockets?](http://caniuse.com/#search=websockets)
 
 ## Como instalar
-Por enquanto, você deve instalar manulamente :(  
+Por enquanto, você deve instalar manulamente :(
 
-Primeiro, se você não possui o node, instale-o.   
-Pesquise do Google, caso você não saiba como fazer isso.  
+Primeiro, se você não possui o node, instale-o.
+Pesquise do Google, caso você não saiba como fazer isso.
 Instale o socket.io:
 ```cli
 npm install socket.io
@@ -37,14 +39,14 @@ Rode o arquivo app.js:
 ```cli
 node app.js
 ```
-O servidor ficará disponível na porta 81 [http:localhost:81](http:localhost:81), mas você pode mudar isso se preferir.  
+O servidor ficará disponível na porta 81 [http:localhost:81](http:localhost:81), mas você pode mudar isso se preferir.
 Agora, você precisa adicionar 2 biblioteca JavaScript na sua apresentação HTML5:
 ```html
 <script src="http://localhost:81/socket.io/socket.io.js"></script>
 <script src="path/to/remote-control.js"></script>
 ```
 
-Você está quase pronto para iniciar a apresentação!  
+Você está quase pronto para iniciar a apresentação!
 Adicione o código abaixo:
 ```javascript
 var remote = new RemoteControl();
@@ -57,8 +59,8 @@ remote.on('previous', function() {
 	// Slide anterior
 });
 ```
-Agora acesse do seu celular o seu IP na porta 81.  
-Você deverá ver uma página feia(estamos trabalhando nisso) com 3 botões.  
+Agora acesse do seu celular o seu IP na porta 81.
+Você deverá ver uma página feia(estamos trabalhando nisso) com 3 botões.
 Se tudo estiver ok, agora você já pode controlar suas apresentações HTML5 com o seu celular.
 
 ## Envolva-se com o projeto
@@ -70,9 +72,9 @@ Se tudo estiver ok, agora você já pode controlar suas apresentações HTML5 co
 - Se você mesmo quer implementar esta funcionalidade (wow! wow!), implemente e [faça um pull-request](https://github.com/braziljs/remote-control/pulls)
 
 ## Quem está por trás disso?
-**Líderes do projeto**:  
-[Jaydson Gomes](http://github.com/jaydson)  
-[Felipe N. Moura](http://github.com/felipenmoura) 
+**Líderes do projeto**:
+[Jaydson Gomes](http://github.com/jaydson)
+[Felipe N. Moura](http://github.com/felipenmoura)
 
 ## Licença
-*[MIT License](http://braziljs.mit-license.org/)*
+[MIT License](http://braziljs.mit-license.org/) © BrazilJS Foundation
